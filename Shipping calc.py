@@ -1,8 +1,13 @@
-p_ground_shipping = 125.00
 
+#User message and weight input
 print('Hello, how much does your package weigh?')
 weight = input()
 
+#FIRST SHIPPING METHOD
+p_ground_shipping = 125.00
+
+
+#SECOND SHIPPING METHOD
 def ground_shipping(weight):
   if weight > 10: 
     return (weight * 4.75) + (20.00)
@@ -13,7 +18,7 @@ def ground_shipping(weight):
   else:
     return (weight * 1.50) + (20.00)
 
-
+#THIRD SHIPPING METHOD
 def drone_shipping(weight):
   if weight > 10:
     return (weight * 14.25)
@@ -24,7 +29,7 @@ def drone_shipping(weight):
   else:
     return (weight * 4.50)
 
-
+#CHEAPEST METHOD CALCULATOR
 def cheapest_shipping(weight):
   ground = ground_shipping(weight)
   premium = p_ground_shipping
